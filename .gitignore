@@ -1,0 +1,12 @@
+/.env.local
+/.env.local.php
+/.env.*.local
+/.env.test
+/.env.dev
+/.env.prod
+/public/bundles/
+/var/
+/src/Command/Sh/
+/vendor/
+/.symfony/
+/.idea/
