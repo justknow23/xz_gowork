@@ -2,56 +2,23 @@ package global
 
 import (
 	"fmt"
-	"github.com/sirupsen/logrus"
 	"gitlab.idc.xiaozhu.com/xz-go/common/config"
 )
 
 // ProjectName -
-const ProjectName = "insurance"
+const ProjectName = "xz_gowork"
 
 // Settings 业务配置
 var Settings Config
 
 // Config 配置
 type Config struct {
-	// Stdout 终端输出
-	Stdout bool `yaml:"stdout"`
-	// LogLevel 日志级别 panic<fatal<error<warn<info<debug<trace
-	LogLevel string `yaml:"log_level"`
-	// LoggerLevel 日志级别
-	LoggerLevel logrus.Level `yaml:"-"`
-	// PingAnDepartmentCode -
-	PinganGrantType string `yaml:"pingan_grant_type"`
-	// PingAnDepartmentCode -
-	PinganClientId string `yaml:"pingan_client_id"`
-	// PingAnDepartmentCode -
-	PinganClientSecret string `yaml:"pingan_client_secret"`
-	// PingAnDepartmentCode -
-	PinganFKPrefix string `yaml:"pingan_fk_prefix"`
-	// PingAnDepartmentCode -
-	PinganFDPrefix string `yaml:"pingan_fd_prefix"`
-	// PingAnDepartmentCode -
-	PingAnDepartmentCode string `yaml:"department_code"`
-	// PingAnPrepaidAccountId -
-	PingAnPrepaidAccountId string `yaml:"prepaid_account_id"`
-	// PingAnPrepaidAccountType -
-	PingAnPrepaidAccountType string `yaml:"prepaid_account_type"`
-	// PingAnTenantProductCode -
-	PingAnTenantProductCode string `yaml:"tenant_product_code"`
-	// PingAnTenantProductPackageCode -
-	PingAnTenantProductPackageCode string `yaml:"tenant_product_package_code"`
-	// PingAnLandlordProductCode -
-	PingAnLandlordProductCode string `yaml:"landlord_product_code"`
-	// PingAnLandlordProductPackageCode -
-	PingAnLandlordProductPackageCode string `yaml:"landlord_product_package_code"`
-	// EmailPeopleList -
-	EmailPeopleList string `yaml:"email_people_list"`
-	// ContentNoticeString -
-	ContentNoticeString string `yaml:"content_notice_string"`
-	// ContentNoticeUrl -
-	ContentNoticeUrl string `yaml:"content_notice_url"`
-	// FailCodeList -
-	FailCodeList string `yaml:"fail_code_list"`
+	// ConfigDemo -
+	ConfigDemo  string `yaml:"configDemo"`
+	PrefixCache string `yaml:"prefixCache"`
+	Ak          string `yaml:"accessKey"`
+	Sk          string `yaml:"secretKey"`
+	BucketName  string `yaml:"bucketName"`
 }
 
 // SetupByConfig 初始化

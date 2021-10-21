@@ -1,13 +1,12 @@
 package tools
 
 import (
-	"insurance/pkg/global"
+	"log"
 	"strconv"
 	"time"
 )
 
-//中国居民身份证 工具类   兼容15位
-//仅仅适用于18位数的身份证
+//中国居民身份证 工具类   18位数 兼容15位
 //通过身份证号，获取出生年份，月份，日，和性别，生日，年龄
 
 type IDCardInfo struct {
@@ -51,13 +50,14 @@ func NewIDCard(IDCardNo string) *IDCardInfo {
 	if IDCardNo == "" {
 		return nil
 	}
-	if len(IDCardNo) == 15 {
+	if len(IDCardNo) != 18 {
 		IDCardNoByte := Citizen15To18([]byte(IDCardNo))
 		IDCardNo = string(IDCardNoByte)
 	}
 	ins := IDCardInfo{
 		IDCardNo: IDCardNo,
 	}
+
 	ins.Year = ins.GetYear()
 	ins.Month = ins.GetMonth()
 	ins.Day = ins.GetDay()
@@ -70,13 +70,14 @@ func NewIDCard(IDCardNo string) *IDCardInfo {
 
 // GetBirthDay 根据身份证号获取生日（时间格式）
 func (s *IDCardInfo) GetBirthDay() *time.Time {
-	if s.IDCardNo == "" {
+	if s == nil {
 		return nil
 	}
 
 	dayStr := s.IDCardNo[6:14] + "000001"
 	birthDay, err := time.Parse("20060102150405", dayStr)
 	if err != nil {
+		log.Fatal(err)
 		return nil
 	}
 
@@ -85,7 +86,7 @@ func (s *IDCardInfo) GetBirthDay() *time.Time {
 
 // GetBirthDayStr 根据身份证号获取生日（字符串格式 yyyy-MM-dd HH:mm:ss）
 func (s *IDCardInfo) GetBirthDayStr() string {
-	defaultDate := "1971-01-01 00:00:00"
+	defaultDate := "1999-01-01 00:00:01"
 	if s == nil {
 		return defaultDate
 	}
@@ -95,12 +96,12 @@ func (s *IDCardInfo) GetBirthDayStr() string {
 		return defaultDate
 	}
 
-	return birthDay.Format(global.DateFmtYMDHIS)
+	return birthDay.Format("2006-01-02 15:04:05")
 }
 
 // GetYear 根据身份证号获取生日的年份
 func (s *IDCardInfo) GetYear() string {
-	if s.IDCardNo == "" {
+	if s == nil {
 		return ""
 	}
 
@@ -109,7 +110,7 @@ func (s *IDCardInfo) GetYear() string {
 
 // GetMonth 根据身份证号获取生日的月份
 func (s *IDCardInfo) GetMonth() string {
-	if s.IDCardNo == "" {
+	if s == nil {
 		return ""
 	}
 
@@ -118,7 +119,7 @@ func (s *IDCardInfo) GetMonth() string {
 
 // GetDay 根据身份证号获取生日的日份
 func (s *IDCardInfo) GetDay() string {
-	if s.IDCardNo == "" {
+	if s == nil {
 		return ""
 	}
 
@@ -152,7 +153,7 @@ func (s *IDCardInfo) GetSex() uint {
 // GetAge 根据身份证号获取年龄
 func (s *IDCardInfo) GetAge() uint {
 	if s == nil {
-		return 0
+		return 19
 	}
 
 	birthDay := s.GetBirthDay()

@@ -2,7 +2,7 @@ package tools
 
 import (
 	"gopkg.in/yaml.v2"
-	"insurance/pkg/json"
+	"xz_gowork/pkg/json"
 )
 
 const (

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"insurance/pkg/json"
+	"xz_gowork/pkg/json"
 
 	"github.com/sirupsen/logrus"
 	"gitlab.idc.xiaozhu.com/xz-go/common/redis"

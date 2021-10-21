@@ -8,4 +8,5 @@ const (
 	EnvStress = "stress" // 压测环境
 	EnvTest   = "test"   // 测试环境
 	EnvDev    = "dev"    // 开发环境
+
 )

@@ -2,7 +2,7 @@ package tools
 
 import (
 	"fmt"
-	"insurance/pkg/global"
+	"xz_gowork/pkg/global"
 	"math"
 	"strconv"
 	"strings"

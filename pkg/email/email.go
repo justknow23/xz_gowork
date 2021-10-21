@@ -2,12 +2,8 @@ package email
 
 import (
 	"fmt"
-	"insurance/pkg/global"
-	"log"
-	"strings"
-
 	"gitlab.idc.xiaozhu.com/xz-go/common/config"
-	"gitlab.idc.xiaozhu.com/xz-go/mail"
+	"log"
 )
 
 //InsuranceTos 保险接收邮件用户列表
@@ -76,30 +72,6 @@ func (c *MailClient) SendAttachMail(scene string, HTMLContent string, attach str
 	if attach != "" {
 		m.Attach(attach) // 参考 mail_test.go
 	}
-
-	if err := mail.Send(m); err != nil {
-		return err
-	}
-	return nil
-}
-
-func (c *MailClient) InsuranceErrorSendMail(content string) error {
-	toList := global.Settings.EmailPeopleList
-	if toList == "" {
-		return nil
-	}
-	InsuranceTos = strings.Split(toList, ",")
-	title := "【上保险失败通知】"
-	HTMLContent := "<h3>" + content + "</h3>"
-	m, err := mail.NewMail(
-		mail.From("social.noreply@xiaozhu.com"),
-		mail.To(InsuranceTos),
-		mail.Subject(title),
-	)
-	if err != nil {
-		return err
-	}
-	m.SetBody(mail.TypeHTML, HTMLContent)
 
 	if err := mail.Send(m); err != nil {
 		return err

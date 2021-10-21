@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"insurance/pkg/cache"
-	"insurance/test"
+	"xz_gowork/pkg/cache"
+	"xz_gowork/test"
 )
 
 //--- PASS: TestNewDistributedLock (0.56s)
