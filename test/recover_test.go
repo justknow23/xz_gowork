@@ -3,12 +3,13 @@ package test
 import (
 	"errors"
 	"fmt"
+	"testing"
 	"time"
 )
 
-func main() {
-	a:=30 * time.Second
-	b:=a.Milliseconds()
+func TestRecover(t *testing.T) {
+	a := 30 * time.Second
+	b := a.Milliseconds()
 	fmt.Println(b)
 	//
 	//e:= c()
@@ -29,7 +30,7 @@ func c() error {
 	Try(func() {
 		panic("panic")
 	}, func(e interface{}) {
-		err = errors.New(fmt.Sprintf("gengtao:%+v",e))
+		err = errors.New(fmt.Sprintf("gengtao:%+v", e))
 	})
 	return err
 }
