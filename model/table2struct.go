@@ -5,6 +5,7 @@ import "github.com/gohouse/converter"
 type Table2Struct struct {
 }
 
+//GetTableStruct
 func (t *Table2Struct) GetTableStruct() error {
 	t2t := converter.NewTable2Struct()
 	t2t.Config(&converter.T2tConfig{

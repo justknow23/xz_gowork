@@ -1,11 +1,5 @@
 package tools_test
 
-import (
-	"xz_gowork/pkg/enum/enumint"
-	"sort"
-	"testing"
-)
-
 type MapSorter []Item
 type Item struct {
 	Key int
@@ -32,12 +26,4 @@ func (ms MapSorter) Less(i, j int) bool {
 
 func (ms MapSorter) Swap(i, j int) {
 	ms[i], ms[j] = ms[j], ms[i]
-}
-
-func TestSort(t *testing.T) {
-	m := enumint.CrmVisitPurposeEnum.GetAll()
-	ms := NewMapSorter(m)
-	t.Logf("sort1: %+v", ms)
-	sort.Sort(ms)
-	t.Logf("sort: %+v", ms)
 }

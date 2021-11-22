@@ -1,4 +1,4 @@
-package test
+package time
 
 import (
 	"encoding/json"

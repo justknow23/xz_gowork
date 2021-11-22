@@ -1,4 +1,4 @@
-package test
+package rsa
 
 import (
 	"crypto/rand"
