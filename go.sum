@@ -180,6 +180,7 @@ github.com/go-stack/stack v1.8.0/go.mod h1:v0f6uXyyMGvRgIKkXu+yp6POWl0qKG85gN/me
 github.com/gogf/gf v1.15.4/go.mod h1:J5TqnACl3Ew9QOWtegJVGrwtwOrXb0mi5OYDncxc9NE=
 github.com/gogo/protobuf v1.1.1/go.mod h1:r8qH/GZQm5c6nD/R0oafs1akxWv10x8SbQlK7atdtwQ=
 github.com/gogo/protobuf v1.2.1/go.mod h1:hp+jE20tsWTFYpLwKvXlhS1hjn+gTNwPg2I6zVXpSg4=
+github.com/gogo/protobuf v1.3.1 h1:DqDEcV5aeaTmdFBePNpYsp3FlcVH/2ISVVM9Qf8PSls=
 github.com/gogo/protobuf v1.3.1/go.mod h1:SlYgWuQ5SjCEi6WLHjHCa1yvBfUnHcTbrrZtXPKa29o=
 github.com/gohouse/converter v0.0.3 h1:xyM0XyhRQUsf2Y0lEABbOHvLDVjiRkjTxi+dza87M80=
 github.com/gohouse/converter v0.0.3/go.mod h1:Yb3eAs+8j4rYcnthK6iK9e/3HDZJ5C2PsYaugkeQR2I=

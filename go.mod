@@ -7,6 +7,7 @@ require (
 	github.com/gin-gonic/gin v1.7.4
 	github.com/go-playground/validator/v10 v10.9.0 // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
+	github.com/gogo/protobuf v1.3.1
 	github.com/gohouse/converter v0.0.3
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/json-iterator/go v1.1.12
