@@ -17,7 +17,7 @@ require (
 	github.com/sirupsen/logrus v1.8.1
 	github.com/stretchr/testify v1.7.0
 	github.com/ugorji/go v1.2.6 // indirect
-	gitlab.idc.xiaozhu.com/xz-go/common v0.0.66
+	gitlab.idc.xiaozhu.com/xz-go/common v0.0.73
 	gitlab.idc.xiaozhu.com/xz-go/message-center v1.0.5
 	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
 	golang.org/x/sys v0.0.0-20211023085530-d6a326fbbf70 // indirect

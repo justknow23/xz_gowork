@@ -511,6 +511,8 @@ gitlab.idc.xiaozhu.com/xz-go/common v0.0.57 h1:7ehHInbzjtZ/qrHAqsL93CPtcDnsAkGLN
 gitlab.idc.xiaozhu.com/xz-go/common v0.0.57/go.mod h1:pIAD4AyXjPfSvue/sqiC/jzgUweyWjCNYnOAtjYc1Zc=
 gitlab.idc.xiaozhu.com/xz-go/common v0.0.66 h1:rcpWhZ2B/PK/UxREXR7DJx7dVz/zBblzKZAjs9rdOnU=
 gitlab.idc.xiaozhu.com/xz-go/common v0.0.66/go.mod h1:XWxTHW92T1RjBzhQJTQqTOXAkp9X03Bdec3/zTPxYuA=
+gitlab.idc.xiaozhu.com/xz-go/common v0.0.73 h1:cw4Bs+voNvOA20+yLG6Ywjpm02C50eOvtONbjuUWSY4=
+gitlab.idc.xiaozhu.com/xz-go/common v0.0.73/go.mod h1:XWxTHW92T1RjBzhQJTQqTOXAkp9X03Bdec3/zTPxYuA=
 gitlab.idc.xiaozhu.com/xz-go/kit v0.0.11/go.mod h1:QLbIeG4nyIFFFL8V1S5s9oMXZPoU6MbEA1DXDuxG+ps=
 gitlab.idc.xiaozhu.com/xz-go/message-center v1.0.5 h1:zFRzEyXkounO1PEgjD+ykqDUXy6Kl9qQEry4aO9QJxg=
 gitlab.idc.xiaozhu.com/xz-go/message-center v1.0.5/go.mod h1:/gOXFPtALOJ1BA5fy1x7oeR0Nq2PTPzuev3A2WXB5m8=
